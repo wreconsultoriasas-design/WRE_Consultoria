@@ -1,184 +1,202 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WRE Consultoría S.A.S. | Recursos Hídricos y Agronómicos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0f172a', /* Slate 900 */
-                        secondary: '#0ea5e9', /* Sky 500 */
-                        accent: '#10b981', /* Emerald 500 */
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .hero-pattern {
-            background-color: #0f172a;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WRE Consultoría S.A.S. Ingeniería hídrica, modelación hidrológica e hidráulica, gestión ambiental, suelos, agronomía, riego y drenaje en Colombia.">
+  <meta name="theme-color" content="#082f3d">
+  <title>WRE Consultoría S.A.S. | Ingeniería hídrica, ambiental y agronómica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <style>
+    :root{--navy:#082f3d;--deep:#061f2a;--teal:#0f9f9a;--mint:#c8f3e8;--gold:#f5b84b}
+    *{box-sizing:border-box}
+    body{font-family:'DM Sans',sans-serif;color:#18313b;background:#f7faf9}
+    h1,h2,h3,.brand{font-family:'Manrope',sans-serif}
+    .hero{background:linear-gradient(112deg,rgba(5,31,42,.96) 0%,rgba(7,55,68,.88) 55%,rgba(9,105,105,.68) 100%),url('https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=2000&q=85') center/cover}
+    .grid-pattern{background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:42px 42px}
+    .eyebrow{letter-spacing:.16em;text-transform:uppercase;font-size:.72rem;font-weight:700}
+    .service-card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+    .service-card:hover{transform:translateY(-6px);box-shadow:0 24px 55px rgba(8,47,61,.11);border-color:#9adbd3}
+    .icon-box{background:linear-gradient(135deg,#e3f8f3,#f1fbf9)}
+    .section-kicker{color:var(--teal)}
+    .btn-primary{background:var(--teal);transition:all .2s ease}
+    .btn-primary:hover{background:#087e7a;transform:translateY(-1px)}
+    .btn-light{transition:all .2s ease}.btn-light:hover{background:#fff;color:var(--navy)}
+    .team-card{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12)}
+    .contact-glow{background:radial-gradient(circle at 10% 10%,rgba(15,159,154,.13),transparent 32%),radial-gradient(circle at 90% 90%,rgba(245,184,75,.13),transparent 28%),#fff}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
 </head>
-<body class="font-sans text-slate-800 antialiased bg-slate-50">
+<body>
+<header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
+  <nav class="max-w-7xl mx-auto px-5 lg:px-8 h-[76px] flex items-center justify-between" aria-label="Navegación principal">
+    <a href="#inicio" class="flex items-center gap-3" aria-label="WRE Consultoría, inicio">
+      <span class="w-11 h-11 rounded-2xl flex items-center justify-center text-white text-xl shadow-lg" style="background:linear-gradient(135deg,var(--teal),var(--navy))"><i class="fa-solid fa-water"></i></span>
+      <span class="brand text-lg sm:text-xl font-extrabold tracking-tight" style="color:var(--navy)">WRE <span class="font-semibold">Consultoría</span><span style="color:var(--teal)">.</span><small class="block text-[9px] sm:text-[10px] tracking-[.2em] font-bold text-slate-500 mt-[-2px]">INGENIERÍA · AMBIENTE · TERRITORIO</small></span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+      <a class="hover:text-teal-700" href="#servicios">Servicios</a>
+      <a class="hover:text-teal-700" href="#enfoque">Nuestro enfoque</a>
+      <a class="hover:text-teal-700" href="#equipo">Equipo</a>
+      <a class="btn-primary text-white px-5 py-3 rounded-full shadow-md" href="#contacto">Solicitar asesoría <i class="fa-solid fa-arrow-right ml-2"></i></a>
+    </div>
+    <button id="menuBtn" class="md:hidden w-11 h-11 rounded-xl border border-slate-200 text-slate-700" aria-label="Abrir menú" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </nav>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 px-5 py-4 space-y-3 shadow-lg">
+    <a class="block py-2 font-semibold" href="#servicios">Servicios</a><a class="block py-2 font-semibold" href="#enfoque">Nuestro enfoque</a><a class="block py-2 font-semibold" href="#equipo">Equipo</a><a class="block py-2 font-semibold" href="#contacto">Contacto</a>
+  </div>
+</header>
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur shadow-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">W</div>
-                    <span class="font-bold text-xl text-primary tracking-tight">WRE Consultoría<span class="text-secondary">.</span></span>
-                </div>
-                <div class="hidden md:flex space-x-8 font-medium text-sm">
-                    <a href="#inicio" class="text-slate-600 hover:text-secondary transition">Inicio</a>
-                    <a href="#servicios" class="text-slate-600 hover:text-secondary transition">Servicios</a>
-                    <a href="#equipo" class="text-slate-600 hover:text-secondary transition">Nuestro Equipo</a>
-                    <a href="#contacto" class="bg-primary text-white px-5 py-2.5 rounded-full hover:bg-slate-800 transition shadow-md">Contacto B2B</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+<main>
+<section id="inicio" class="hero grid-pattern relative pt-36 pb-24 md:pt-44 md:pb-32 text-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 relative">
+    <div class="max-w-4xl">
+      <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 mb-7 text-sm text-teal-50"><span class="w-2 h-2 rounded-full bg-amber-300"></span> Consultoría técnica para proyectos que necesitan precisión</div>
+      <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight">Convertimos los retos del <span class="text-teal-200">agua y el territorio</span> en soluciones.</h1>
+      <p class="mt-7 max-w-2xl text-lg md:text-xl leading-relaxed text-slate-200">Ingeniería hídrica, gestión ambiental y ciencias del suelo para tomar mejores decisiones, reducir incertidumbres y desarrollar proyectos sostenibles.</p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="#servicios" class="btn-primary inline-flex justify-center items-center gap-3 rounded-full px-7 py-4 font-bold text-white shadow-xl"><i class="fa-solid fa-compass-drafting"></i> Explorar servicios</a>
+        <a href="#contacto" class="btn-light inline-flex justify-center items-center gap-3 rounded-full border border-white/35 bg-white/10 px-7 py-4 font-bold text-white"><i class="fa-regular fa-comments"></i> Hablemos de su proyecto</a>
+      </div>
+      <div class="mt-12 flex flex-wrap gap-x-7 gap-y-3 text-sm text-slate-200">
+        <span><i class="fa-solid fa-check text-teal-200 mr-2"></i>Modelación y análisis técnico</span>
+        <span><i class="fa-solid fa-check text-teal-200 mr-2"></i>Soluciones a la medida</span>
+        <span><i class="fa-solid fa-check text-teal-200 mr-2"></i>Enfoque sostenible</span>
+      </div>
+    </div>
+  </div>
+  <div class="hidden lg:block absolute right-[7%] bottom-[-30px] opacity-20"><i class="fa-solid fa-water text-[300px]"></i></div>
+</section>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 hero-pattern overflow-hidden">
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
-                Ingeniería avanzada en <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent">Recursos Hídricos</span><br />y Gestión Agronómica
-            </h1>
-            <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-300 mb-10">
-                Soluciones integrales de consultoría para el sector privado, agroindustria y proyectos de infraestructura. Optimización, modelación y sostenibilidad.
-            </p>
-            <div class="flex justify-center gap-4">
-                <a href="#servicios" class="bg-secondary text-white px-8 py-3.5 rounded-full font-semibold hover:bg-sky-600 transition shadow-lg shadow-sky-500/30">Nuestros Servicios</a>
-                <a href="#contacto" class="bg-white/10 text-white border border-white/20 px-8 py-3.5 rounded-full font-semibold hover:bg-white/20 transition backdrop-blur">Agendar Asesoría</a>
-            </div>
-        </div>
-    </section>
+<section class="relative z-10 -mt-8 max-w-7xl mx-auto px-5 lg:px-8">
+  <div class="grid sm:grid-cols-3 gap-4 rounded-3xl bg-white p-6 md:p-8 shadow-xl shadow-slate-900/10 border border-slate-100">
+    <div class="flex gap-4 items-center"><span class="w-12 h-12 rounded-2xl icon-box flex items-center justify-center text-xl" style="color:var(--teal)"><i class="fa-solid fa-chart-line"></i></span><div><p class="font-bold" style="color:var(--navy)">Decisiones informadas</p><p class="text-sm text-slate-500">Datos, criterios y análisis técnico</p></div></div>
+    <div class="flex gap-4 items-center"><span class="w-12 h-12 rounded-2xl icon-box flex items-center justify-center text-xl" style="color:var(--teal)"><i class="fa-solid fa-laptop-code"></i></span><div><p class="font-bold" style="color:var(--navy)">Herramientas especializadas</p><p class="text-sm text-slate-500">Modelación y evaluación de escenarios</p></div></div>
+    <div class="flex gap-4 items-center"><span class="w-12 h-12 rounded-2xl icon-box flex items-center justify-center text-xl" style="color:var(--teal)"><i class="fa-solid fa-seedling"></i></span><div><p class="font-bold" style="color:var(--navy)">Visión integral</p><p class="text-sm text-slate-500">Agua, suelo, infraestructura y ambiente</p></div></div>
+  </div>
+</section>
 
-    <!-- Servicios -->
-    <section id="servicios" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-primary mb-4">Áreas de Especialidad</h2>
-                <p class="text-slate-500 max-w-2xl mx-auto">Intervenciones técnicas precisas fundamentadas en modelación computacional, normatividad ambiental y evaluación agrológica.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:border-sky-100 transition group">
-                    <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-water text-2xl text-secondary"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Modelación Hidrológica e Hidráulica</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Análisis morfodinámico, transporte de sedimentos y flujos hiperconcentrados. Simulaciones 1D y 2D empleando HEC-RAS, iRIC, SWMM y HEC-HMS.
-                    </p>
-                </div>
+<section id="servicios" class="py-24 md:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="max-w-3xl mb-14">
+      <p class="eyebrow section-kicker mb-4">Qué hacemos</p>
+      <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight" style="color:var(--navy)">Conocimiento técnico para resolver desafíos reales.</h2>
+      <p class="mt-5 text-lg text-slate-600 leading-relaxed">Acompañamos a empresas, entidades y proyectos rurales y de infraestructura con estudios y consultoría ajustados a sus necesidades.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+      <article class="service-card rounded-3xl border border-slate-200 bg-white p-7 md:p-8">
+        <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6" style="color:var(--teal)"><i class="fa-solid fa-water"></i></div>
+        <p class="eyebrow text-slate-400 mb-2">01 / Agua</p><h3 class="text-xl font-extrabold mb-3" style="color:var(--navy)">Hidrología e hidráulica</h3>
+        <p class="text-slate-600 leading-relaxed text-sm">Estudios hidrológicos e hidráulicos, análisis de caudales, inundaciones, avenidas torrenciales, transporte de sedimentos y flujos hiperconcentrados.</p>
+        <div class="mt-5 flex flex-wrap gap-2"><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">HEC-RAS</span><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">HEC-HMS</span><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">iRIC</span></div>
+      </article>
+      <article class="service-card rounded-3xl border border-slate-200 bg-white p-7 md:p-8">
+        <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6" style="color:var(--teal)"><i class="fa-solid fa-earth-americas"></i></div>
+        <p class="eyebrow text-slate-400 mb-2">02 / Territorio</p><h3 class="text-xl font-extrabold mb-3" style="color:var(--navy)">Suelos y evaluación agrológica</h3>
+        <p class="text-slate-600 leading-relaxed text-sm">Caracterización de suelos, cartografía, geomorfología, capacidad y aptitud de uso, y análisis de limitaciones y potencialidades del territorio.</p>
+        <div class="mt-5 flex flex-wrap gap-2"><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">Suelos</span><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">Agrología</span><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">Cartografía</span></div>
+      </article>
+      <article class="service-card rounded-3xl border border-slate-200 bg-white p-7 md:p-8">
+        <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6" style="color:var(--teal)"><i class="fa-solid fa-faucet-drip"></i></div>
+        <p class="eyebrow text-slate-400 mb-2">03 / Infraestructura</p><h3 class="text-xl font-extrabold mb-3" style="color:var(--navy)">Riego, drenaje y redes</h3>
+        <p class="text-slate-600 leading-relaxed text-sm">Análisis y diseño de sistemas de riego, drenaje, redes de acueducto y alcantarillado, así como evaluación de alternativas para el reúso de aguas tratadas.</p>
+        <div class="mt-5 flex flex-wrap gap-2"><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">EPANET</span><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">EPA SWMM</span><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">Modelación</span></div>
+      </article>
+      <article class="service-card rounded-3xl border border-slate-200 bg-white p-7 md:p-8">
+        <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6" style="color:var(--teal)"><i class="fa-solid fa-leaf"></i></div>
+        <p class="eyebrow text-slate-400 mb-2">04 / Ambiente</p><h3 class="text-xl font-extrabold mb-3" style="color:var(--navy)">Gestión ambiental</h3>
+        <p class="text-slate-600 leading-relaxed text-sm">Apoyo técnico en estudios y planes ambientales, permisos, balances hídricos y procesos de planificación y seguimiento ambiental.</p>
+        <div class="mt-5 flex flex-wrap gap-2"><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">EIA</span><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">PMA</span><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">POMCA</span></div>
+      </article>
+      <article class="service-card rounded-3xl border border-slate-200 bg-white p-7 md:p-8">
+        <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6" style="color:var(--teal)"><i class="fa-solid fa-tractor"></i></div>
+        <p class="eyebrow text-slate-400 mb-2">05 / Producción rural</p><h3 class="text-xl font-extrabold mb-3" style="color:var(--navy)">Consultoría agronómica</h3>
+        <p class="text-slate-600 leading-relaxed text-sm">Acompañamiento técnico para proyectos agrícolas y pecuarios, manejo de suelos y agua, y evaluación de condiciones que influyen en la productividad rural.</p>
+        <div class="mt-5 flex flex-wrap gap-2"><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">Productividad</span><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">Manejo de suelos</span></div>
+      </article>
+      <article class="service-card rounded-3xl border border-slate-200 bg-white p-7 md:p-8">
+        <div class="icon-box w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6" style="color:var(--teal)"><i class="fa-solid fa-code"></i></div>
+        <p class="eyebrow text-slate-400 mb-2">06 / Tecnología</p><h3 class="text-xl font-extrabold mb-3" style="color:var(--navy)">Análisis de datos y automatización</h3>
+        <p class="text-slate-600 leading-relaxed text-sm">Apoyo en procesamiento de información, análisis reproducible y automatización de tareas técnicas mediante herramientas computacionales.</p>
+        <div class="mt-5 flex flex-wrap gap-2"><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">Python</span><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">R</span><span class="text-xs rounded-full bg-slate-100 px-3 py-1.5">Datos</span></div>
+      </article>
+    </div>
+  </div>
+</section>
 
-                <!-- Card 2 -->
-                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:border-emerald-100 transition group">
-                    <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-leaf text-2xl text-accent"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Mapeo de Suelos y Agronomía</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Levantamientos de suelos a escala detallada (1:25.000), evaluación de capacidad agrológica y coordinación de proyectos agropecuarios.
-                    </p>
-                </div>
+<section id="enfoque" class="py-20 md:py-24 text-white" style="background:var(--navy)">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
+    <div>
+      <p class="eyebrow text-teal-200 mb-4">Nuestro enfoque</p>
+      <h2 class="text-3xl md:text-5xl font-extrabold leading-tight">Más que un informe: herramientas para decidir con confianza.</h2>
+      <p class="mt-6 text-slate-300 text-lg leading-relaxed">Integramos criterios de ingeniería, información territorial y modelación para ayudar a comprender escenarios, comparar alternativas y sustentar decisiones de proyecto.</p>
+      <a href="#contacto" class="inline-flex items-center gap-3 mt-8 font-bold text-teal-200 hover:text-white">Cuéntenos qué necesita <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-6"><i class="fa-solid fa-magnifying-glass-chart text-2xl text-teal-200"></i><h3 class="font-bold text-lg mt-4">Diagnóstico</h3><p class="text-sm text-slate-300 mt-2 leading-relaxed">Entendemos el problema, los datos disponibles y los requerimientos del proyecto.</p></div>
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-6"><i class="fa-solid fa-gears text-2xl text-teal-200"></i><h3 class="font-bold text-lg mt-4">Análisis técnico</h3><p class="text-sm text-slate-300 mt-2 leading-relaxed">Evaluamos métodos, supuestos y escenarios con herramientas pertinentes.</p></div>
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-6"><i class="fa-solid fa-file-circle-check text-2xl text-teal-200"></i><h3 class="font-bold text-lg mt-4">Resultados claros</h3><p class="text-sm text-slate-300 mt-2 leading-relaxed">Presentamos conclusiones y entregables comprensibles para apoyar decisiones.</p></div>
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-6"><i class="fa-solid fa-handshake-angle text-2xl text-teal-200"></i><h3 class="font-bold text-lg mt-4">Acompañamiento</h3><p class="text-sm text-slate-300 mt-2 leading-relaxed">Orientación técnica durante el alcance acordado para cada trabajo.</p></div>
+    </div>
+  </div>
+</section>
 
-                <!-- Card 3 -->
-                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:border-sky-100 transition group">
-                    <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-faucet-drip text-2xl text-secondary"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Riego, Drenaje y Redes Hidrosanitarias</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Diseño de sistemas de irrigación agrícola, drenaje urbano, redes de acueducto y alcantarillado. Estrategias de reúso de aguas tratadas.
-                    </p>
-                </div>
+<section id="equipo" class="py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-14"><p class="eyebrow section-kicker mb-4">Personas y experiencia</p><h2 class="text-3xl md:text-5xl font-extrabold tracking-tight" style="color:var(--navy)">Un equipo con mirada interdisciplinaria.</h2><p class="mt-5 text-lg text-slate-600">Ingeniería agrícola, recursos hídricos, ciencias del suelo y desarrollo rural trabajando en conjunto.</p></div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="rounded-3xl bg-white border border-slate-200 p-7 text-center shadow-sm"><div class="w-20 h-20 mx-auto rounded-3xl flex items-center justify-center text-3xl text-white mb-5" style="background:linear-gradient(135deg,var(--navy),var(--teal))"><i class="fa-solid fa-user-tie"></i></div><h3 class="text-xl font-extrabold" style="color:var(--navy)">Víctor Alfonso Guzmán</h3><p class="font-bold text-sm mt-2" style="color:var(--teal)">Consultor principal</p><p class="text-sm leading-relaxed text-slate-600 mt-4">Ingeniero agrícola con enfoque en modelación matemática de recursos hídricos, morfodinámica fluvial y estructuración de proyectos de ingeniería.</p></article>
+      <article class="rounded-3xl bg-white border border-slate-200 p-7 text-center shadow-sm"><div class="w-20 h-20 mx-auto rounded-3xl flex items-center justify-center text-3xl text-white mb-5" style="background:linear-gradient(135deg,#0b665d,#52b99c)"><i class="fa-solid fa-seedling"></i></div><h3 class="text-xl font-extrabold" style="color:var(--navy)">Raúl Páez Mendoza</h3><p class="font-bold text-sm mt-2" style="color:var(--teal)">Dirección técnica de agronomía</p><p class="text-sm leading-relaxed text-slate-600 mt-4">Agrólogo enfocado en caracterización edáfica, cartografía de suelos, geomorfología e interventoría ambiental.</p></article>
+      <article class="rounded-3xl bg-white border border-slate-200 p-7 text-center shadow-sm"><div class="w-20 h-20 mx-auto rounded-3xl flex items-center justify-center text-3xl text-white mb-5" style="background:linear-gradient(135deg,#93651a,#e8b54d)"><i class="fa-solid fa-wheat-awn"></i></div><h3 class="text-xl font-extrabold" style="color:var(--navy)">Gustavo Adolfo Rivas</h3><p class="font-bold text-sm mt-2" style="color:var(--teal)">Dirección agronómica</p><p class="text-sm leading-relaxed text-slate-600 mt-4">Coordinación de proyectos agrícolas y pecuarios, con enfoque en desarrollo sostenible y productividad rural.</p></article>
+    </div>
+  </div>
+</section>
 
-                <!-- Card 4 -->
-                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:border-emerald-100 transition group">
-                    <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-file-contract text-2xl text-accent"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Gestión y Normatividad Ambiental</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Elaboración de Planes de Manejo Ambiental (PMA), balances hídricos, trámites ante Corporaciones Autónomas (CARs) e interventoría (POMCA).
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="contacto" class="contact-glow py-24 border-t border-slate-100">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8">
+    <div class="rounded-[2rem] overflow-hidden shadow-2xl grid md:grid-cols-[1.15fr_.85fr]">
+      <div class="p-8 md:p-12 text-white" style="background:var(--navy)">
+        <p class="eyebrow text-teal-200 mb-4">Hablemos de su proyecto</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">¿Necesita una solución técnica para su proyecto?</h2>
+        <p class="mt-5 text-slate-300 leading-relaxed">Cuéntenos el reto que está enfrentando. Podemos conversar sobre el alcance, la información disponible y las alternativas de trabajo.</p>
+        <a href="https://wa.me/573164387493?text=Hola%20WRE%20Consultor%C3%ADa%2C%20quiero%20consultar%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center gap-3 mt-8 rounded-full px-6 py-4 font-bold text-white"><i class="fa-brands fa-whatsapp text-xl"></i> Contactar por WhatsApp</a>
+      </div>
+      <div class="bg-white p-8 md:p-10 flex flex-col justify-center gap-7">
+        <div class="flex gap-4 items-start"><span class="w-11 h-11 shrink-0 rounded-xl icon-box flex items-center justify-center" style="color:var(--teal)"><i class="fa-solid fa-phone"></i></span><div><p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Teléfono / WhatsApp</p><a class="font-bold text-lg hover:underline" style="color:var(--navy)" href="https://wa.me/573164387493">+57 316 438 7493</a><p class="text-sm text-slate-500 mt-1">También puede escribirnos al <a href="https://wa.me/573113208007" class="underline">+57 311 320 8007</a></p></div></div>
+        <div class="flex gap-4 items-start"><span class="w-11 h-11 shrink-0 rounded-xl icon-box flex items-center justify-center" style="color:var(--teal)"><i class="fa-regular fa-envelope"></i></span><div><p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Correo electrónico</p><a class="font-bold break-all hover:underline" style="color:var(--navy)" href="mailto:wreconsultoria@outlook.com">wreconsultoria@outlook.com</a></div></div>
+        <div class="flex gap-4 items-start"><span class="w-11 h-11 shrink-0 rounded-xl icon-box flex items-center justify-center" style="color:var(--teal)"><i class="fa-solid fa-location-dot"></i></span><div><p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Cobertura</p><p class="font-bold" style="color:var(--navy)">Colombia</p><p class="text-sm text-slate-500 mt-1">Consultoría para proyectos públicos y privados.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
 
-    <!-- Equipo -->
-    <section id="equipo" class="py-20 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Directiva Técnica</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">Experiencia multidisciplinaria combinando ingeniería agrícola, hidrología y ciencias agronómicas.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="p-6">
-                    <div class="w-24 h-24 mx-auto bg-slate-800 rounded-full flex items-center justify-center border-2 border-secondary mb-4">
-                        <i class="fa-solid fa-user-tie text-3xl text-secondary"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-1">Víctor Alfonso Guzmán</h3>
-                    <p class="text-secondary text-sm font-medium mb-3">CEO & Consultor Principal</p>
-                    <p class="text-slate-400 text-xs">Ingeniero Agrícola. Especialista en modelación matemática de recursos hídricos, morfodinámica fluvial y estructuración de proyectos de ingeniería.</p>
-                </div>
-                
-                <div class="p-6">
-                    <div class="w-24 h-24 mx-auto bg-slate-800 rounded-full flex items-center justify-center border-2 border-accent mb-4">
-                        <i class="fa-solid fa-seedling text-3xl text-accent"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-1">Raúl Páez Mendoza</h3>
-                    <p class="text-accent text-sm font-medium mb-3">Director Técnico de Agronomía</p>
-                    <p class="text-slate-400 text-xs">Agrólogo experto en caracterización edáfica, cartografía de suelos, geomorfología e interventoría ambiental.</p>
-                </div>
-
-                <div class="p-6">
-                    <div class="w-24 h-24 mx-auto bg-slate-800 rounded-full flex items-center justify-center border-2 border-accent mb-4">
-                        <i class="fa-solid fa-tractor text-3xl text-accent"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-1">Gustavo Adolfo Rivas</h3>
-                    <p class="text-accent text-sm font-medium mb-3">Director Agronómico</p>
-                    <p class="text-slate-400 text-xs">Coordinador de proyectos pecuarios y agrícolas, enfocado en el desarrollo sostenible y optimización de la productividad rural.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto / CTA -->
-    <section id="contacto" class="py-24 bg-white relative overflow-hidden">
-        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
-            <h2 class="text-3xl font-bold text-primary mb-6">¿Requiere una evaluación técnica para su proyecto?</h2>
-            <p class="text-slate-500 mb-10 text-lg">Nos especializamos en brindar soporte B2B a constructoras, fincas agroindustriales y clubes privados, optimizando recursos a través de ingeniería de precisión.</p>
-            
-            <a href="https://wa.me/TUNUMERO" class="inline-flex items-center gap-3 bg-accent text-white px-8 py-4 rounded-full font-bold hover:bg-emerald-600 transition shadow-lg shadow-emerald-500/30 text-lg">
-                <i class="fa-brands fa-whatsapp text-2xl"></i> Hablemos por WhatsApp
-            </a>
-            
-            <div class="mt-12 flex justify-center gap-6">
-                <a href="#" class="text-slate-400 hover:text-secondary text-2xl transition"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="text-slate-400 hover:text-secondary text-2xl transition"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="text-slate-400 hover:text-secondary text-2xl transition"><i class="fa-brands fa-facebook"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 py-8 border-t border-slate-800 text-center">
-        <p class="text-slate-500 text-sm">© 2026 WRE Consultoría S.A.S. Todos los derechos reservados.</p>
-    </footer>
-
+<footer class="py-8 text-white" style="background:var(--deep)">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col sm:flex-row gap-4 items-center justify-between">
+    <a href="#inicio" class="brand font-extrabold text-lg">WRE <span class="font-medium">Consultoría S.A.S.</span></a>
+    <p class="text-sm text-slate-400 text-center">Ingeniería hídrica · Gestión ambiental · Ciencias del suelo</p>
+    <p class="text-xs text-slate-500">© <span id="year">2026</span> WRE Consultoría S.A.S.</p>
+  </div>
+</footer>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    menuBtn.innerHTML = isOpen ? '<i class="fa-solid fa-bars"></i>' : '<i class="fa-solid fa-xmark"></i>';
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
